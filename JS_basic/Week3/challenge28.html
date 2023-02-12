@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Event Challenges: Challenge 22</title>
+	<style>
+		div {
+			width: 50px;
+			height: 50px;
+			background-color: rgb(255,0,0);
+			transition: all 2s;
+		}
+
+		.big {
+			width: 200px;
+			height: 200px;
+			background-color: rbg(0,0,255);
+			border-radius: 50%;
+			transition: all 2s;
+		}
+	</style>
+</head>
+<body>
+	<h1>Javascript Event Challenges: Challenge</h1>
+
+	<div></div>
+
+	<script>
+		var divTag = document.querySelector('div');
+		
+		divTag.addEventListener('mouseover', (evt) => {
+			divTag.className = 'big';
+		});
+
+		divTag.addEventListener('mouseout', (evt) => {
+			divTag.className = '';
+		});
+	</script>
+</body>
+</html>
